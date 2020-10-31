@@ -1,0 +1,33 @@
+in: 0
+out: error
+
+in: 11
+out: error
+
+in: .3
+out: error
+
+in: 1
+.2
+out: error
+
+in: 3
+3 5 7
+out: error
+
+in: 3
+-1 -2 -3
+out:error
+
+in: 3
+0 0 0
+out: error
+
+in: 5
+-1 1 2 3 4
+out: -4
+
+in: 8
+-1 -2 -3 -4  1 2 3 4
+out: -20
+

@@ -1,0 +1,44 @@
+Параметры: количество повторов 10; размер массива 10
+Вывод:
+Time for process zero (working with pointers): 0
+Time for process one (using a[i]): 0
+Time for process two (using *(a + i)): 0
+(слишком маленькие значения)
+
+Параметры: количество повторов 10; размер массива 100
+Вывод:
+Time for process zero (working with pointers): 0
+Time for process one (using a[i]): 0
+Time for process two (using *(a + i)): 0
+(все еще слишком маленькие значения)
+
+Параметры: количество повторов 10; размер массива 1000
+Вывод:
+Time for process zero (working with pointers): 0
+Time for process one (using a[i]): 99
+Time for process two (using *(a + i)): 0
+
+Параметры: количество повторов 10; размер массива 5000
+Вывод:
+Time for process zero (working with pointers): 198
+Time for process one (using a[i]): 199
+Time for process two (using *(a + i)): 199
+
+Параметры: количество повторов 10; размер массива 10000
+Вывод:
+Time for process zero (working with pointers): 497
+Time for process one (using a[i]): 398
+Time for process two (using *(a + i)): 299
+
+Параметры: количество повторов 100; размер массива 10
+Вывод:
+Time for process zero (working with pointers): 0
+Time for process one (using a[i]): 0
+Time for process two (using *(a + i)): 0
+(слишком маленькие значения)
+
+Параметры: количество повторов 1000; размер массива 1000
+Вывод:
+Time for process zero (working with pointers): 10
+Time for process one (using a[i]): 18
+Time for process two (using *(a + i)): 7

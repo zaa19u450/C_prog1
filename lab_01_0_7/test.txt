@@ -1,0 +1,19 @@
+Input:3 .001
+Output:
+Approximate value s(x): 20.085215
+Exact value f(x): 20.085537
+Absolute error: 0.000322
+Relative error: 0.000016
+
+Input:8 0.1
+Output:
+Approximate value s(x): 2980.858643
+Exact value f(x): 2980.958008
+Absolute error: 0.099365
+Relative error: 0.000033
+
+Input:4 -1
+Output: error
+
+Input:1 2
+Output: error

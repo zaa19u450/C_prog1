@@ -1,0 +1,19 @@
+Input sum
+50
+The max number of bottles is 1
+
+Input sum
+10
+The max number of bottles is 0
+
+Input sum
+50
+The max number of bottles is 1
+
+Input sum
+94
+The max number of bottles is 2
+
+Input sum
+60
+The max number of bottles is 1

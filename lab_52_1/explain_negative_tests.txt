@@ -1,0 +1,50 @@
+Ошибки:
+
+Неверные параметры командной строки:
+недостаточно параметров
+
+app.exe in_1.txt > out.txt
+in_1.txt: ...
+out_1.txt: ERROR in parametrs
+
+app.exe st > out.txt
+out_2.txt: ERROR in parametrs
+
+app.exe ft in_3.txt > out.txt
+in_3.txt:...
+out_3.txt: ERROR in parametrs
+
+app.exe db > out.txt
+out_4.txt: ERROR in parametrs
+
+неизвестная команда
+app.exe gt th > out.txt
+out_5.txt: ERROR in parametrs
+
+несуществующий файл
+app.exe st unknown.txt > out.txt
+out_6.txt:ERROR in file opening
+
+Пустой файл
+app.exe ft in_7.txt > out.txt
+out_7.txt:ERROR file is empty
+
+В файле некорректные данные:
+(для любой команды)
+app.exe st in_8.txt > out.txt
+in_8.txt:
+Petrov
+Bob
+-10 2 a 5
+out_8.txt:ERROR in valuues in file
+
+По команде студент не найден
+app.exe ft in_9.txt out.txt t > out.txt
+in_9.txt:
+Me
+ap
+1 1 1 1 
+You
+fep
+1 1 1 1 
+out_9.txt: ERROR student not found

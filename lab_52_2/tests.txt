@@ -1,0 +1,138 @@
+Ошибочные ситуации:
+
+Неверное число параметров
+app.exe
+out: ERROR in parametrs
+
+app.exe file.bin
+out: ERROR in parametrs
+
+app.exe fb
+out: ERROR in parametrs
+
+app.exe fb file.bin
+out: ERROR in parametrs
+
+app.exe ab
+out: ERROR in parametrs
+
+Неизвестная команда
+app.exe at file.bin
+out: ERROR in parametrs
+
+Пустой файл
+app.exe fb empty.bin Str
+out: ERROR file is empty
+
+файла не сущестует
+app.exe fb unknown.bin Str
+out: ERROR in file opening
+
+В файле некорретные данные
+app.exe fb incorrect.bin Str
+out: ERROR in valuues
+
+Искомый товар не найден
+app.exe fb notfound.bin he
+out: ERROR product not found
+
+Рабочие ситуации:
+(для них в папке лежат файлы .bin, которые подаюстся в программу и соответсвующие .txt, с тем же содержимым
+
+команада fb - поиск товара, оканчивающегося на подстроку и вывод на экран
+
+найдено несколько товаров
+app.exe fb in_1.bin in
+out: на экран 
+BOBin
+correct
+5
+5
+Rin
+correct
+5
+200
+
+найден 1 товар
+app.exe fb in_2.bin full
+out: на экран 
+full
+correct
+5
+5
+
+команада ab - Добавляет информацию о новом товаре в уже упорядоченную последовательность
+товаров так, чтобы упорядоченность не нарушилась. Информация о новом товаре
+запрашивается у пользователя. 
+(в файлах in_i.bin, in_i.txt - файлы, подаваемые на вход (преобразуются программой),
+ файлах pre_i.bin, pre_i.txt - копии файлов до преобразования
+
+Товар следует добавить в начало
+app.exe ab in_3.bin
+Добавляемый товар
+Zero
+pr
+1000
+1
+
+Товар следует добавить в конец
+app.exe ab in_4.bin
+Fourth
+pr
+10
+40
+
+Товар следует добавить в середину
+app.exe ab in_5.bin
+Second2
+pr
+300
+8
+
+
+
+
+Функции, не используемые в программе, но полезные для подготовки тестов и проведения тестирования
+
+Создает массив из структур из текстового файла
+int create_array_of_structures(FILE *f, product_struct product_arr[])
+{
+    int i = 0;
+    for (; (fscanf(f, "%s", product_arr[i].name) == 1 && fscanf(f, "%s", product_arr[i].org) == 1 &&
+         fscanf(f, "%u", &(product_arr[i].cost)) && fscanf(f, "%u", &(product_arr[i].amount))); i++)
+         ;
+    return i;
+}
+
+
+Выводит структуры из бинарного файла
+void print_products_from_binary(FILE *f, int n)
+{
+    product_struct product;
+    memset(&product, 0, sizeof(product_struct));
+    for (int i = 0; i < n; i++)
+    {
+        get_structure_by_pos(f, i, &product);
+        print_struct(stdout, product);
+    }
+}
+
+Переводит текстовый файл со структурами в бинарный
+void txt_to_bin(char name1[30], char name2[30])
+{
+    FILE *ft = fopen(name1, "rt"), *fb = fopen(name2, "wb");
+
+    product_struct product_arr[10];
+    memset(&product_arr, 0, sizeof(product_struct));
+
+    int n = create_array_of_structures(ft, product_arr);
+    for (int i = 0; i < n; i++)
+        put_structure_by_pos(fb, i, product_arr[i]);
+    fclose(fb);
+    fclose(ft);
+}
+
+
+
+
+

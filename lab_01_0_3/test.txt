@@ -1,0 +1,45 @@
+Enter float height in centimeters.
+145
+Enter float circumference of the chest in centimeters.
+80
+Enter float mass in kg.
+50
+Normal weight: 48.333332
+Body mass index: 23.781214
+
+Enter float height in centimeters.
+145
+Enter float circumference of the chest in centimeters.
+80
+Enter float mass in kg.
+50
+Normal weight: 48.333332
+Body mass index: 23.781214
+
+Enter float height in centimeters.
+130
+Enter float circumference of the chest in centimeters.
+70.
+Enter float mass in kg.
+40.4
+Normal weight: 37.916668
+Body mass index: 23.905325
+
+Enter float height in centimeters.
+130
+Enter float circumference of the chest in centimeters.
+70.
+Enter float mass in kg.
+40.4
+Normal weight: 37.916668
+Body mass index: 23.905325
+
+Enter float height in centimeters.
+130
+Enter float circumference of the chest in centimeters.
+70.
+Enter float mass in kg.
+40.4
+Normal weight: 37.916668
+Body mass index: 23.905325
+

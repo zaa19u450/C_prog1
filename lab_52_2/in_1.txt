@@ -1,0 +1,16 @@
+BOBin
+correct
+5
+5
+BOBi
+incorrect
+10
+2
+Rin
+correct
+5
+200
+Bn
+incorrect
+10
+1

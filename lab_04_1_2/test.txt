@@ -1,0 +1,48 @@
+Ошибочные ситуации
+
+Пустая строка
+Input: 
+Output: error
+
+Строка только из символов-разделителей
+Input: .  ! ? - , : ; 
+Output: error
+
+Cлишком длинная строка
+Input: errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror
+Output: error
+
+Cлишком длинное слово в строке
+Input: rdgg.regs! errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror
+Output: error
+
+Рабочие ситуации
+
+В строке одно слово
+Input:        fgh!. ?
+Output: Result:fgh
+
+В строке все слова одинаковые
+Input:  one one one!one
+Output: Result:one
+
+В строке несколько одинковых слов
+Input:  one two three one two one
+Output: Result:one three two
+
+В строке слова, начинающиеся с одних букв
+Input:  pony pokemon play porche
+Output: Result:play pokemon pony porche
+
+В строке все слова разные
+Input:  test passed succesfully yyyyyyy
+Output: Result:passed succesfully test yyyyyyy
+
+В строке встречаются цифры
+Input:  100 is not bigger than 99!
+Output: Result:100 99 bigger is not than
+
+Строка заканчивается симовом-разделителем
+Input:  ad fr th?
+Output: Result:ad fr th
+

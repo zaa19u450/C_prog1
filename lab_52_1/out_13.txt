@@ -1,0 +1,18 @@
+Bobrov
+Nikolai
+4 4 4 4 
+Fer
+Por
+1 1 1 1 
+Koval
+Olga
+5 2 3 4 
+Moroz
+Ded
+4 6 7 2 
+Zaytseva
+Alena
+5 5 5 5 
+Zaytseva
+Elena
+5 5 5 5 

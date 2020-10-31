@@ -1,0 +1,56 @@
+Ошибочные ситуации
+
+Пустая строка
+Input: 
+Output: error
+
+Строка только из символов-разделителей
+Input: .  ! ? - , : ; 
+Output: error
+
+Cлишком длинная строка
+Input: errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror
+Output: error
+
+Cлишком длинное слово в строке
+Input: rdgg.regs! errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror
+Output: error
+
+В строке все слова одинаковые с последним
+Input: qwe qwe qwe qwe?
+Output: error
+
+В строке одно слово
+Input:        fgh!. ?
+Output: error
+
+
+Рабочие ситуации
+
+В строке есть слова, в которых повторяется буква, не являющаяся первой
+Input:  ada add aaff ara
+Output: Result: aff add ad
+
+В строке только одно слово, отличное от последнего
+Input:  qwe qwe rt qwe qwe
+Output: Result: rt
+
+В строке несколько одинковых с последним слов
+Input:  qwe rtr tyy fgt asd qwe qwe
+Output: Result: asd fgt tyy rt
+
+В строке есть слова, отличные от последнего, в которых первая буква входит повторно
+Input:  qqwe qwqq qweq qqqq rt
+Output: Result: q qwe qw qwe
+
+В строке нет слов, в которых первая буква входит повторно
+Input:  qwe rty yui r
+Output: Result: yui rty qwe
+
+В строке встречаются цифры
+Input:  100 99  rtge we 11 11
+Output: Result: we rtge 9 100
+
+Строка заканчивается симовом-разделителем
+Input:  ad fr th?
+Output: Result: fr ad
